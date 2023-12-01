@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Função para converter número romano para decimal
 int romanToDecimal(char *num) {
     int valores[26];
     valores['I' - 'A'] = 1;
@@ -31,7 +30,6 @@ int romanToDecimal(char *num) {
     return decimal;
 }
 
-// Função para converter decimal para binário
 void decimalParaBinario(int n) {
     int numBinario[32];
     int i = 0;
@@ -49,19 +47,11 @@ void decimalParaBinario(int n) {
 int main() {
     char numeroRomano[13];
     scanf("%s", numeroRomano);
-
-    // Convertendo para decimal
     int numeroDecimal = romanToDecimal(numeroRomano);
-
-    // Mostrando em binário
     printf("%s na base 2: ", numeroRomano);
     decimalParaBinario(numeroDecimal);
     printf("\n");
-
-    // Mostrando em decimal
     printf("%s na base 10: %d\n", numeroRomano, numeroDecimal);
-
-    // Mostrando em hexadecimal
     printf("%s na base 16: %x\n", numeroRomano, numeroDecimal);
 
     return 0;
